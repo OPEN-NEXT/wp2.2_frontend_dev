@@ -1,3 +1,14 @@
+# asdf files
+.tool-versions
+
+# direnv files and environments
+.envrc
+.direnv/
+
+#
+# GitHub generated list below
+#
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
