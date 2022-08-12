@@ -1,2 +1,2 @@
 # Modify this Procfile to fit your needs
-web: mercury run ./repos.ipynb 127.0.0.1:$PORT
+web: mercury run 0.0.0.0:$PORT
