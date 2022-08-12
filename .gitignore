@@ -5,6 +5,12 @@
 .envrc
 .direnv/
 
+# Mercury generated run files
+celery*
+
+# VSCodium/Visual Studio Code files
+.vscode*
+
 #
 # GitHub generated list below
 #
