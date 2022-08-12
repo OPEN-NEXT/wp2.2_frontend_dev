@@ -1,0 +1,78 @@
+title: Datasette Dashboard
+about: foo bar baz
+about_url: https://github.com/OPEN-NEXT/
+description_html: |-
+  Try it out at <a href="/-/dashboards">/-/dashboards</a>
+
+plugins:
+  datasette-dashboards:
+    repo-stats:
+      title: Repository
+      description: Metrics about this repository
+#      layout:
+#        - [analysis-note, offers-day, offers-day, offers-count]
+#        - [analysis-note, offers-source, offers-day-source, offers-region]
+#      filters:
+#        date_start:
+#          name: Date Start
+#          type: date
+#          default: '2021-01-01'
+#        date_end:
+#          name: Date End
+#          type: date
+      charts:
+
+        analysis-note:
+          library: markdown
+          display: |-
+            # Analysis details
+
+            We wanted to analyze data from job offers, using the **`python` search keyword**
+            from three sources of job-boards:
+            [APEC](https://www.apec.fr),
+            [Indeed](https://fr.indeed.com/) and
+            [RegionsJob](https://regionsjob.com).
+
+            ## Process
+
+            The process was in 3 steps:
+
+            - Extraction
+            - Transformation
+            - Loading
+
+            After the ETL process, an extra data enrichment step was developed to provide
+            location geocoding, based on place names.
+
+            ## SQL query
+
+            ```sql
+            SELECT
+              date(date) as day,
+              count(*) as count
+            FROM offers_view
+            GROUP BY day
+            ORDER BY day
+            ```
+
+        issues-opened: 
+          title: Issues opened in past year
+          db: repos
+          query: SELECT COUNT(createdAt) AS created FROM issues_level WHERE createdAt >= date("2022-08-10", "-1 year");
+          # query: SELECT STRFTIME("%Y-%m", updatedAt) AS "year-month", COUNT(createdAt) AS created, COUNT(closedAt) AS closed FROM issues_level GROUP BY STRFTIME("%Y-%m", updatedAt) ORDER BY "year-month"
+          library: metric
+          display: 
+            field: created
+            prefix: 
+            suffix: 
+
+        commits-history: 
+          title: Commits over time
+          db: repos
+          query: SELECT date(committedDate) AS YMD, COUNT(oid) AS commits FROM commits_level GROUP BY date(committedDate)
+          library: vega
+          display: 
+            mark: { type: line, tooltip: true}
+            encoding: 
+              x: { field: YMD, type: temporal }
+              y: { field: commits, type: quantitative }
