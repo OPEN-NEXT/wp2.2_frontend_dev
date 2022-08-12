@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: 2021 Pen-Yuan Hsing
+# SPDX-License-Identifier: CC0-1.0
+
+jupyterlab>=3.4.5
+mljar-mercury>=1.1.5
+pandas>=1.4.3
+plotly>=5.10
