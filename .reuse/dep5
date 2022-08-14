@@ -5,6 +5,7 @@ Source: https://github.com/OPEN-NEXT/wp2.2_frontend_dev/
 
 Files:
     contrib/contrib.md
+    assets/*
     README.md
 Copyright: 2022 Pen-Yuan Hsing
 License: CC-BY-SA-4.0
