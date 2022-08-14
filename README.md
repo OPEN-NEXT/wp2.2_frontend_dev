@@ -4,6 +4,7 @@
 [![Python version](https://img.shields.io/badge/Python-3.10-blue.svg?style=flat&logo=Python&logoColor=white)](https://docs.python.org/3.10)
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat)](https://github.com/RichardLitt/standard-readme)
 [![REUSE status](https://api.reuse.software/badge/github.com/OPEN-NEXT/wp2.2_frontend_dev)](https://api.reuse.software/info/github.com/OPEN-NEXT/wp2.2_frontend_dev)
+[![DOI](https://www.zenodo.org/badge/519289691.svg)](https://www.zenodo.org/badge/latestdoi/519289691)
 
 **Example *demonstrator** frontend for an open source development status dashboard*
 
