@@ -1,0 +1,21 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: wp2.2_frontend_dev
+Upstream-Contact: Pen-Yuan Hsing <https://github.com/penyuan/>
+Source: https://github.com/OPEN-NEXT/wp2.2_frontend_dev/
+
+Files:
+    contrib/contrib.md
+    README.md
+Copyright: 2022 Pen-Yuan Hsing
+License: CC-BY-SA-4.0
+
+Files: 
+    contrib/GitHub_repos_data.json
+    contrib/Datasette/metadata.yml
+Copyright: 2022 Pen-Yuan Hsing
+License: CC0-1.0
+
+Files: 
+    repos.ipynb
+Copyright: 2022 Pen-Yuan Hsing
+License: AGPL-3.0-or-later
