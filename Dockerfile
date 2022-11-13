@@ -24,4 +24,4 @@ RUN pip install --no-cache-dir --upgrade -r requirements.txt
 # USER myuser
 
 # CMD mercury run repos.ipynb 0.0.0.0:$PORT
-CMD mercury run repos.ipynb 0.0.0.0
+CMD mercury run repos.ipynb
