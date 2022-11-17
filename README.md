@@ -1,6 +1,6 @@
 # Open!Next D2.5 process faciliation dashboard frontend demo
 
-[![Demo frontend](https://img.shields.io/badge/Demo-CLICK%20HERE-green.svg?style=flat)](https://wp22-frontend-demo.herokuapp.com/app/1)
+[![Demo frontend](https://img.shields.io/badge/Demo-CLICK%20HERE-green.svg?style=flat)](http://wp22-frontend.us.to)
 [![Python version](https://img.shields.io/badge/Python-3.10-blue.svg?style=flat&logo=Python&logoColor=white)](https://docs.python.org/3.10)
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat)](https://github.com/RichardLitt/standard-readme)
 [![REUSE status](https://api.reuse.software/badge/github.com/OPEN-NEXT/wp2.2_frontend_dev)](https://api.reuse.software/info/github.com/OPEN-NEXT/wp2.2_frontend_dev)
@@ -53,7 +53,7 @@ In addition to Python and the dependencies listed above, the following programs 
 
 ### Running locally from source
 
-The code can be run from source and has been tested on updated versions of GNU/Linux server operating systems including [Red Hat Enterprise Linux](https://redhat.com/en/technologies/linux-platforms/enterprise-linux) 8.6. While effort has been made to keep the Python scripts and JupyterLab notebook platform-agnostic, they have not been tested under other operating systems such as [BSD](https://en.wikipedia.org/wiki/Berkeley_Software_Distribution)-derivatives, [Apple macOS](https://www.apple.com/macos/) or [Microsoft Windows](https://www.microsoft.com/windows/) as they - especially the latter two - are rarely used for hosting code such as this.
+The code can be run from source and has been tested on updated versions of GNU/Linux server operating systems including [Red Hat Enterprise Linux](https://redhat.com/en/technologies/linux-platforms/enterprise-linux) 8.7. While effort has been made to keep the Python scripts and JupyterLab notebook platform-agnostic, they have not been tested under other operating systems such as [BSD](https://en.wikipedia.org/wiki/Berkeley_Software_Distribution)-derivatives, [Apple macOS](https://www.apple.com/macos/) or [Microsoft Windows](https://www.microsoft.com/windows/) as they - especially the latter two - are rarely used for hosting code such as this.
 
 On your server, with the tools [`git`](https://git-scm.com/) and [`pip`](https://pip.pypa.io/) installed, run the following commands in a terminal session to retrieve the latest version of this repository and prepare it for development and running locally (usually for testing): 
 
@@ -72,7 +72,13 @@ mercury run ./repos.ipynb
 
 There will be some output in the terminal. If there are no obvious error messages, this means the demo frontend is up an running, and should be accessible on your local machine on port 8000 at 127.0.0.1 (i.e. `127.0.0.1:8000`).
 
-Note: By default, the JupyterLab notebook `repos.ipynb` will use data contained in `contrib/GitHub_repos_data.json` and visualise them. This [JSON](https://en.wikipedia.org/wiki/JSON) file contains data from various open source hardware repositories hosted on GitHub. It is the same information that the [dashboard backend API](https://github.com/OPEN-NEXT/wp2.2_dev) will provide. 
+A demo of this showing possible visualisations for some OSH projects is hosted here: 
+
+```
+http://wp22-frontend.us.to
+```
+
+Note: By default, the JupyterLab notebook `repos.ipynb` will use data contained in `contrib/GitHub_repos_data.json` and visualise them. This [JSON](https://en.wikipedia.org/wiki/JSON) file contains data from various open source hardware repositories hosted on GitHub. It is the same information that the [dashboard backend API](https://github.com/OPEN-NEXT/wp2.2_dev) will provide.
 
 ### Deploy to web
 
@@ -96,21 +102,13 @@ heroku create [your app name]
 heroku open
 ```
 
-A demo of this is hosted on Heroku with this URL: 
-
-```
-https://wp22-frontend-demo.herokuapp.com/app/1
-```
-
-This demo instance will go into a sleep state after a period of inactivity (approximately 30 minutes at time of writing). This means it may take a while to load the demo instance when you visit it with your web browser.
-
 ## Usage
 
 Frontends showing project status metrics from the [dashboard backend API](https://github.com/OPEN-NEXT/wp2.2_dev) could be implemented independently. Such a frontend could show aggregate information about open source hardware projects hosted on GitHub or Wikifactory.
 
 A major component of Open!Next D2.5 is that Wikifactory has implemented various frontend dashboard features. Some of these features are *in production* an viewable on various Wikifactory projects. This will be gradually rolled out to all Wikifactory projects in the coming months.
 
-In addition to that, this repository implements a demo frontend that shows information about open source hardware repositories hosted on GitHub. After deploying this demo per the installation steps above, open it in your web browser. You can also visit a demo instance at: [https://wp22-frontend-demo.herokuapp.com/app/1](https://wp22-frontend-demo.herokuapp.com/app/1)
+In addition to that, this repository implements a demo frontend that shows information about open source hardware repositories hosted on GitHub. After deploying this demo per the installation steps above, open it in your web browser. You can also visit a demo instance at: [http://wp22-frontend.us.to](http://wp22-frontend.us.to)
 
 The following are basic steps for interacting with the demo: 
 
